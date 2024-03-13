@@ -9,23 +9,34 @@ class square():
 
     width = 0
 
-    def __init__(self, *args, **kwargs):
+    def __init__(self, width=0):
         """ Documentation """
-        for key, value in kwargs.items():
-            if key == "width":
-                setattr(self, key, value)
+        self.__width = width
+
+    @property
+    def width(self):
+        """ Documentation """
+        return self.__width
+
+    @width.setter
+    def width(self, value):
+        if value < 0:
+            raise ValueError("width must be a positive number")
+        if type(value) not in ("int", "float"):
+            raise TypeError("with must be a number")
+        setattr(self, str(self.__width), int(value))
 
     def area_of_my_square(self):
         """ Area of the square """
-        return self.width * self.width
+        return self.__width * self.__width
 
     def PermiterOfMySquare(self):
         """ Documentation """
-        return (self.width * 4)
+        return (self.__width * 4)
 
     def __str__(self):
         """ Documentation """
-        return "{0}/{0}".format(self.width)
+        return "{0}/{0}".format(self.__width)
 
 
 if __name__ == "__main__":
