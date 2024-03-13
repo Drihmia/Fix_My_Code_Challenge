@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-""" 
+"""
 square class
 """
 
+
 class square():
     """ Documentation """
-    
+
     width = 0
 
     def __init__(self, *args, **kwargs):
