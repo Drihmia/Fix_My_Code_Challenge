@@ -20,11 +20,11 @@ class square():
 
     def PermiterOfMySquare(self):
         """ Documentation """
-        return (self.width * 2) + (self.width * 2)
+        return (self.width * 4)
 
     def __str__(self):
         """ Documentation """
-        return "{}/{}".format(self.width, self.width)
+        return "{0}/{0}".format(self.width)
 
 
 if __name__ == "__main__":
