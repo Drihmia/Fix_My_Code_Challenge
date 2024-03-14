@@ -11,6 +11,10 @@ class Square:
 
     def __init__(self, width):
         """Documentation"""
+        if width < 0:
+            raise ValueError("Width must be a positive number")
+        if not isinstance(width, (int, float)):
+            raise TypeError("Width must be a number")
         self.width = width
 
     def area_of_my_square(self):
