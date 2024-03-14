@@ -12,10 +12,10 @@ class Square:
     def __init__(self, *args, **kwargs):
         """Documentation"""
         if "width" in kwargs:
-            if kwargs["width"] < 0:
-                raise ValueError("Width must be a positive number")
             if not isinstance(kwargs["width"], (int, float)):
                 raise TypeError("Width must be a number")
+            if kwargs["width"] < 0:
+                raise ValueError("Width must be a positive number")
             self.width = kwargs["width"]
 
     def area_of_my_square(self):
@@ -33,7 +33,7 @@ class Square:
 
 if __name__ == "__main__":
 
-    s = Square(widh=3, hi=9)
+    s = Square(width=1, hi=9)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
