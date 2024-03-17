@@ -4,7 +4,7 @@ square class
 """
 
 
-class Square:
+class Square():
     """Documentation"""
 
     width = 0
@@ -17,8 +17,10 @@ class Square:
                 if not isinstance(kwargs[key], (int, float)):
                     raise TypeError("{} must be a number".format(key))
                 if kwargs[key] < 0:
-                    raise ValueError("{} must be a positive number".format(key))
+                    raise ValueError("{} must be a positive number"
+                                     .format(key))
                 setattr(self, key, value)
+
     def area_of_my_square(self):
         """Area of the square"""
         return self.width * self.height
@@ -34,7 +36,7 @@ class Square:
 
 if __name__ == "__main__":
     """entry point to this module"""
-    s = Square(width=10, height=9)
+    s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
