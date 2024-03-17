@@ -5,13 +5,13 @@ square class
 
 
 class Square():
-    """Documentation"""
+    """Documentation : the square class"""
 
     width = 0
     height = 0
 
     def __init__(self, *args, **kwargs):
-        """Documentation"""
+        """Documentation: the init method"""
         for key, value in kwargs.items():
             if key in kwargs:
                 if not isinstance(kwargs[key], (int, float)):
@@ -22,20 +22,21 @@ class Square():
                 setattr(self, key, value)
 
     def area_of_my_square(self):
-        """Area of the square"""
+        """Documentation: Area of the square"""
         return self.width * self.height
 
     def perimeter_of_my_square(self):
-        """Documentation"""
+        """Documentation: the perimeter of the square"""
         return (self.width * 2) + (self.height * 2)
 
     def __str__(self):
-        """Documentation"""
+        """Documentation: the string representation of the square"""
         return "{0}/{1}".format(self.width, self.height)
 
 
 if __name__ == "__main__":
     """entry point to this module"""
+
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
