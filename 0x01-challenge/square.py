@@ -12,13 +12,15 @@ class Square():
 
     def __init__(self, *args, **kwargs):
         """Documentation: the init method"""
+
         if 'width' not in kwargs or 'height' not in kwargs:
             raise ValueError("Both width and height must be provided.")
+
         for key, value in kwargs.items():
             if key in kwargs:
-                if not isinstance(kwargs[key], (int, float)):
+                if not isinstance(value, (int, float)):
                     raise TypeError("{} must be a number".format(key))
-                if kwargs[key] < 0:
+                if value <= 0:
                     raise ValueError("{} must be a positive number"
                                      .format(key))
                 setattr(self, key, value)
