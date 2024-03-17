@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/redouane/git/Fix_My_Code_Challenge/0x01-challenge/status_server",
+      "program": "/Users/redouane/git/Fix_My_Code_Challenge/0x01-challenge/status_server/build/Debug/outDebug"
+    }
+  ]
+}
