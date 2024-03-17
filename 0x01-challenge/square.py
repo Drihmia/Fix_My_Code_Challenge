@@ -17,13 +17,12 @@ class Square():
             raise ValueError("Both width and height must be provided.")
 
         for key, value in kwargs.items():
-            if key in kwargs:
-                if not isinstance(value, (int, float)):
-                    raise TypeError("{} must be a number".format(key))
-                if value <= 0:
-                    raise ValueError("{} must be a positive number"
-                                     .format(key))
-                setattr(self, key, value)
+            if not isinstance(value, (int, float)):
+                raise TypeError("{} must be a number".format(key))
+            if value <= 0:
+                raise ValueError("{} must be a positive number"
+                                 .format(key))
+            setattr(self, key, value)
 
     def area_of_my_square(self):
         """Documentation: Area of the square"""
@@ -35,7 +34,7 @@ class Square():
 
     def __str__(self):
         """Documentation: the string representation of the square"""
-        return "{0}/{1}".format(self.width, self.height)
+        return "Square(width={}, height={})".format(self.width, self.height)
 
 
 if __name__ == "__main__":
@@ -45,8 +44,3 @@ if __name__ == "__main__":
     print(s)
     print(s.area_of_my_square())
     print(s.perimeter_of_my_square())
-
-    ss = Square(width=12)
-    print(ss)
-    print(ss.area_of_my_square())
-    print(ss.perimeter_of_my_square())
