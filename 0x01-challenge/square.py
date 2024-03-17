@@ -7,9 +7,6 @@ square class
 class Square():
     """Documentation : the square class"""
 
-    width = 0
-    height = 0
-
     def __init__(self, *args, **kwargs):
         """Documentation: the init method"""
 
