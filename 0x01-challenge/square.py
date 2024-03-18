@@ -13,15 +13,7 @@ class Square():
     def __init__(self, *args, **kwargs):
         """Documentation: the init method"""
 
-        if 'width' not in kwargs or 'height' not in kwargs:
-            raise ValueError("Both width and height must be provided.")
-
         for key, value in kwargs.items():
-            if not isinstance(value, (int, float)):
-                raise TypeError("{} must be a number".format(key))
-            if value <= 0:
-                raise ValueError("{} must be a positive number"
-                                 .format(key))
             setattr(self, key, value)
 
     def area_of_my_square(self):
@@ -42,7 +34,6 @@ class Square():
 
 if __name__ == "__main__":
     """entry point to this module"""
-
     s = Square(width=12, height=9)
     print(s)
     print(s.area_of_my_square())
